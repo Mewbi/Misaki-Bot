@@ -1,0 +1,7 @@
+Debug = true
+
+[bot-telegram]
+  Token = ""
+
+[db]
+  Address = "database.db"

@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/Mewbi/Misaki-Bot/bot"
-	"github.com/Mewbi/Misaki-Bot/config"
+	"github.com/Mewbi/Misaki-Bot/conf"
 )
 
 func main() {
-	config.Load()
+	conf.Load()
 	bot.Start()
 }

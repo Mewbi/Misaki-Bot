@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14-alpine
+    restart: always
+    ports:
+      - '5000:5432'
+    volumes:
+      #- ./sql/storage/:var/lib/postgres/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      #- ./sql/data.sql:/docker-entrypoint-initdb.d/data.sql
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=misaki_db
+      - POSTGRES_USER=misaki
